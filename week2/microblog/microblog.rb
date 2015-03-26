@@ -1,5 +1,6 @@
 require 'sinatra/base'
 require 'bundler/setup'
+<<<<<<< HEAD
 require './Post.rb'
 
 class Microblog < Sinatra::Application
@@ -7,12 +8,23 @@ class Microblog < Sinatra::Application
 
   get '/' do
     haml :home, locals: {welcome_message: 'Welcome to microblog :)', posts: @@posts}
+=======
+
+class Microblog < Sinatra::Application
+  before do
+    posts = []
+  end
+
+  get '/' do
+    haml :home, locals: {:welcome_message => 'Welcome to microblog :)'}
+>>>>>>> Initialize app and add BOOTSTRA.386 style
   end
 
   not_found do
     haml :not_found
   end
 
+<<<<<<< HEAD
   get '/create' do
     haml :create
   end
@@ -25,5 +37,7 @@ class Microblog < Sinatra::Application
     redirect '/'
   end
 
+=======
+>>>>>>> Initialize app and add BOOTSTRA.386 style
   run! if app_file == $0
 end

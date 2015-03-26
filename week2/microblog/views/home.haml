@@ -1,6 +1,7 @@
 .text-center
   %h1= locals[:welcome_message]
 
+<<<<<<< HEAD
   - @posts = locals[:posts]
   - if @posts and not @posts.empty?
     %ul
@@ -13,3 +14,7 @@
 
   .btn
     %a{href: '/create'} Create a new post
+=======
+  .btn
+    %a{href: '/posts/create'} Create a new post
+>>>>>>> Initialize app and add BOOTSTRA.386 style

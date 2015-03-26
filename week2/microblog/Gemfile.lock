@@ -1,0 +1,42 @@
+GIT
+  remote: git://github.com/sinatra/sinatra.git
+  revision: 29c51d12fdd91ee254e51d4ce099535fcb6ea1a9
+  specs:
+    sinatra (1.4.6)
+      rack (~> 1.4)
+      rack-protection (~> 1.4)
+      tilt (>= 1.3, < 3)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    activemodel (3.2.21)
+      activesupport (= 3.2.21)
+      builder (~> 3.0.0)
+    activerecord (3.2.21)
+      activemodel (= 3.2.21)
+      activesupport (= 3.2.21)
+      arel (~> 3.0.2)
+      tzinfo (~> 0.3.29)
+    activesupport (3.2.21)
+      i18n (~> 0.6, >= 0.6.4)
+      multi_json (~> 1.0)
+    arel (3.0.3)
+    builder (3.0.4)
+    haml (4.0.6)
+      tilt
+    i18n (0.7.0)
+    multi_json (1.11.0)
+    rack (1.6.0)
+    rack-protection (1.5.3)
+      rack
+    tilt (2.0.1)
+    tzinfo (0.3.43)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  activerecord (~> 3.0)
+  haml
+  sinatra!

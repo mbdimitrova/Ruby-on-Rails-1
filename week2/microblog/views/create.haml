@@ -1,4 +1,15 @@
 .text-center
   %h1 Create a post
 
-i don't even know
+  %p (i don't even know)
+
+.text-center
+  %form.horizontal{ method: 'post', role: 'form' }
+    .form-group
+      %label{ for: "title" } Title:
+      %input.form-control{ id: "title", type: "text", name: "title"}
+    .form-group
+      %label{ for: "title" } Post:
+      %textarea.form-control{ id: "text", type: "text", name: "text"}
+    %button.btn.btn-default{ type: "submit" } Submit
+

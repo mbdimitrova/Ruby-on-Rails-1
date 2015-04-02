@@ -2,12 +2,17 @@ require 'sinatra/base'
 require 'bundler/setup'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 require './Post.rb'
+=======
+require './models/post.rb'
+>>>>>>> Use erb instead of haml :pensive:
 
 class Microblog < Sinatra::Application
   @@posts = []
 
   get '/' do
+<<<<<<< HEAD
     haml :home, locals: {welcome_message: 'Welcome to microblog :)', posts: @@posts}
 =======
 =======
@@ -24,10 +29,13 @@ class Microblog < Sinatra::Application
 =======
     haml :home, locals: {welcome_message: 'Welcome to microblog :)', posts: @@posts}
 >>>>>>> Implement creating of a post, add a Post class
+=======
+    erb :home, locals: {welcome_message: 'Welcome to microblog :)', posts: @@posts}
+>>>>>>> Use erb instead of haml :pensive:
   end
 
   not_found do
-    haml :not_found
+    erb :not_found
   end
 
 <<<<<<< HEAD
@@ -35,7 +43,7 @@ class Microblog < Sinatra::Application
 =======
 >>>>>>> Implement creating of a post, add a Post class
   get '/create' do
-    haml :create
+    erb :create
   end
 
   post '/create' do

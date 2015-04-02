@@ -1,20 +1,20 @@
 require 'sinatra/base'
 require 'bundler/setup'
-require './Post.rb'
+require './models/post.rb'
 
 class Microblog < Sinatra::Application
   @@posts = []
 
   get '/' do
-    haml :home, locals: {welcome_message: 'Welcome to microblog :)', posts: @@posts}
+    erb :home, locals: {welcome_message: 'Welcome to microblog :)', posts: @@posts}
   end
 
   not_found do
-    haml :not_found
+    erb :not_found
   end
 
   get '/create' do
-    haml :create
+    erb :create
   end
 
   post '/create' do

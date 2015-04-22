@@ -1,5 +1,7 @@
 class BrandsController < ApplicationController
   def index
-    @brands = []
+  end
+
+  def count
   end
 end

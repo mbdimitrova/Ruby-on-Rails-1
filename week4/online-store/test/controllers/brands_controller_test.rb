@@ -5,4 +5,9 @@ class BrandsControllerTest < ActionController::TestCase
     get :index
     assert_response :success
   end
+
+  test "shoild get count" do
+    get :count
+    assert_response :success
+  end
 end

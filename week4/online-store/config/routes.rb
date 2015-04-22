@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+
+  get 'brands/count' => 'brands#count'
   resources :brands
 
   # The priority is based upon order of creation: first created -> highest priority.

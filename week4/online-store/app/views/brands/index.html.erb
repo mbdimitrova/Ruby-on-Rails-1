@@ -1,1 +1,11 @@
-<%= "Count: #{brands_count}" %>
+<h1>
+  <%= "Brands: " %>
+</h1>
+
+<% if brands_count > 0 %>
+  <% @brands.each do |brand| %>
+    <p><%= brand[:title] %>
+  <% end %>
+<% else %>
+  <p>There aren't any brands.
+<% end %>

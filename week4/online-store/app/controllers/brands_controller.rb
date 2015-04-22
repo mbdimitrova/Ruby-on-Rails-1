@@ -1,3 +1,5 @@
 class BrandsController < ApplicationController
-  # TODO
+  def index
+    @brands = []
+  end
 end

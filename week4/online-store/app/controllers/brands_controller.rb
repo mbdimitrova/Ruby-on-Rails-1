@@ -8,29 +8,35 @@ class BrandsController < ApplicationController
     render 'index'
   end
 
-  def brand_with_index
-    @brands = get_brands(params[:index].to_i, 1)
+  def show
+    @brands = [Brand.find(params[:id].to_i)]
     render 'index'
   end
 
   def range
-    start = params[:index].to_i
+    start = params[:id].to_i
     @brands = get_brands(start)
     render 'index'
   end
 
   def range_count
-    start, count = params[:index].to_i, params[:count].to_i
+    start, count = params[:id].to_i, params[:count].to_i
     @brands = get_brands(start, count)
     render 'index'
   end
 
+  def new
+    @brand = Brand.create(name: params[:name], description: params[:description])
+    redirect_to @brand
+  end
+
   private
 
-  def get_brands(start, count = 'all')
+  def get_brands(start, count = 0)
+    #TODO should be inside the model
     if start < Brand.all.count
       brands = Brand.all[start..-1]
-      count != 'all' ? brands.take(count) : brands
+      count == 0 ? brands : brands.take(count)
     else
       []
     end

@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
 
   get 'brands/count' => 'brands#count'
-  get 'brands/:index' => 'brands#brand_with_index'
-  get 'brands/range/:index' => 'brands#range'
-  get 'brands/range/:index/:count' => 'brands#range_count'
-  resources :brands
+  get 'brands/range/:id' => 'brands#range'
+  get 'brands/range/:id/:count' => 'brands#range_count'
+  get 'brands/new' => 'brands#create'
+  post 'brands/new' => 'brands#new'
+  resources :brands, except: :new
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

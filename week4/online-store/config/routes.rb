@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   get 'brands/count' => 'brands#count'
+  get 'brands/:index' => 'brands#brand_with_index'
   get 'brands/range/:index' => 'brands#range'
   get 'brands/range/:index/:count' => 'brands#range_count'
   resources :brands

@@ -8,6 +8,11 @@ class BrandsController < ApplicationController
     render 'index'
   end
 
+  def brand_with_index
+    @brands = get_brands(params[:index].to_i, 1)
+    render 'index'
+  end
+
   def range
     start = params[:index].to_i
     @brands = get_brands(start)

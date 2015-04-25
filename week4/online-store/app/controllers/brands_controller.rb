@@ -5,6 +5,7 @@ class BrandsController < ApplicationController
 
   def count
     @count = Brand.all.count
+    render 'index'
   end
 
   def range

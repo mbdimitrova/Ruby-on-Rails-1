@@ -1,12 +1,16 @@
 <h1>
-  <%= "Brands: " %>
+  <%= "Brands" %>
 </h1>
 
-<% if @brands.count > 0 %>
-  <% @brands.each do |brand| %>
-    <% p brand %>
-    <p><%= brand.name %>
+<% if @brands %>
+  <% if @brands.count > 0 %>
+    <% @brands.each do |brand| %>
+      <% p brand %>
+      <p><%= brand.name %>
+    <% end %>
+  <% else %>
+    <p>There aren't any brands.
   <% end %>
-<% else %>
-  <p>There aren't any brands.
+<% elsif @count %>
+  <p>Count: <%= @count %>
 <% end %>

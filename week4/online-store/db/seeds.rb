@@ -6,5 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-brands = Brand.create([{ name: 'Philips', description: 'They actualy make toothbrishes' }, { name: 'Telefunken', description: 'Old-school TVs'}])
+brands = Brand.create([{ name: 'Philips', description: 'They actualy make toothbrishes' },
+                       { name: 'Telefunken', description: 'Old-school TVs'},
+                       { name: 'Dell', description: 'Laptops and stuff'}])
 puts "Two brands are created."

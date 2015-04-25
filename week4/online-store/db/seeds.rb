@@ -9,4 +9,4 @@
 brands = Brand.create([{ name: 'Philips', description: 'They actualy make toothbrishes' },
                        { name: 'Telefunken', description: 'Old-school TVs'},
                        { name: 'Dell', description: 'Laptops and stuff'}])
-puts "Two brands are created."
+puts "Three brands are created."

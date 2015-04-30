@@ -1,0 +1,11 @@
+<h1>
+  <%= "Lectures" %>
+</h1>
+
+<% if @lectures and @lectures.count > 0 %>
+  <% @lectures.each do |lecture| %>
+    <p><%= lecture.name %>
+  <% end %>
+<% else %>
+  <p>There aren't any lectures yet :(
+<% end %>
